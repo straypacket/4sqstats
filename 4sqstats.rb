@@ -9,7 +9,7 @@ client.user_venue_history().items.each do |v|
 	if v.venue.categories[0]
 		if v.venue.categories[0].parents
 			#puts "#{v.beenHere} #{v.venue.name} #{v.venue.categories[0].parents[0]}"
-			checkins_a["#{v.venue.name} - #{v.venue.categories[0].parents[0]}"] = v.beenHere;
+			checkins_a["#{v.venue.name} - #{v.venue.categories[0].name} - #{v.venue.categories[0].parents[0]}"] = v.beenHere;
 		else
 			#puts "#{v.beenHere} #{v.venue.name} #{v.venue.categories[0]}"
 			checkins_a["#{v.venue.name} - #{v.venue.categories[0]}"] = v.beenHere;
