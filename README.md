@@ -1,0 +1,4 @@
+4sqstats
+========
+
+Foursquare statistics
