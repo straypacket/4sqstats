@@ -11,8 +11,9 @@ doc.remove_namespaces!
 #doc.traverse {|node| puts node.path}
 
 # New badges
-doc.search('//table[1]/tr/td[1][normalize-space()]').each do |b|
-	puts b
+doc.search('//table[1]/tr/td[1]/a[normalize-space()]').each do |b|
+	puts b.text
+	puts b.values
 end
 
 # Core badges
