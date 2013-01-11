@@ -8,8 +8,12 @@ Twitter.configure do |config|
   config.oauth_token_secret = '3Jsua436nVAaplyCUd2DN448UmFlUZNltG5fvxYAwdw'
 end
 
-foo = Twitter.search("American Red Cross", :count => 3, :result_type => "recent").results.map do |status|
+foo = Twitter.search("unlocked foursquare", :count => 3, :result_type => "recent").results.map do |status|
   "#{status.from_user}: #{status.text}"
 end
+
+#foo = Twitter.search("unlocked red cross foursquare until:2012-01-01 since:2011-12-01", :count => 3, :result_type => "recent").results.map do |status|
+#  "#{status.from_user}: #{status.text}"
+#end
 
 puts foo
